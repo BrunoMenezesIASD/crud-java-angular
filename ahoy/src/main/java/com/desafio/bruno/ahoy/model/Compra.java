@@ -12,7 +12,6 @@ import java.util.List;
 @Setter
 @ToString()
 @Embeddable
-@Data
 public class Compra{
 
     public List<Valor> valor;

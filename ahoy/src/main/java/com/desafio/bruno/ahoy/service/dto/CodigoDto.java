@@ -1,16 +1,13 @@
-package com.desafio.bruno.ahoy.model;
+package com.desafio.bruno.ahoy.service.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
 @Getter
 @Setter
 @ToString()
-public class Valor {
+public class CodigoDto {
 
     public String _text;
 }

@@ -14,5 +14,6 @@ import java.util.ArrayList;
 @Embeddable
 @Data
 public class Geracao{
+
     public ArrayList<Valor> valor;
 }

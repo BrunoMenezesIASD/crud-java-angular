@@ -1,17 +1,14 @@
-package com.desafio.bruno.ahoy.model;
+package com.desafio.bruno.ahoy.service.dto;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Embeddable;
-
 @Getter
 @Setter
 @ToString()
-@Embeddable
-public class Attributes{
+public class AttributesDto {
+
 
     public String version;
 

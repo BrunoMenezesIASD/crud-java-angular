@@ -4,15 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
+import javax.persistence.*;
 import java.util.List;
 
 @Getter
 @Setter
 @ToString()
 @Embeddable
-@lombok.Data
 public class Agente{
 
     @Embedded
@@ -21,6 +19,7 @@ public class Agente{
     @Embedded
     public Data data;
 
-
+    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true)
+    @JoinColumn(name = "agente_id", insertable = false, updatable = false)
     public List<Regiao> regiao;
 }

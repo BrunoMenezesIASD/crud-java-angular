@@ -12,7 +12,6 @@ import java.util.Date;
 @Setter
 @ToString()
 @Embeddable
-@lombok.Data
 public class Data {
 
     @Embedded

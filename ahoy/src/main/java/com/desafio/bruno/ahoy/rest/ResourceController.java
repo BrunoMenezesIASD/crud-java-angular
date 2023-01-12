@@ -1,4 +1,4 @@
-package com.desafio.bruno.ahoy.controller;
+package com.desafio.bruno.ahoy.rest;
 
 import com.desafio.bruno.ahoy.model.Resource;
 import com.desafio.bruno.ahoy.service.ResourceService;

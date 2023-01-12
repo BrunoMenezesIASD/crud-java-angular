@@ -5,15 +5,19 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
+import javax.persistence.*;
 
 @Getter
 @Setter
 @ToString()
-@Embeddable
 @Data
+@Entity
+@Table(name = "regiao")
 public class Regiao {
+
+    @Id
+    @Column(name = "id", nullable = false)
+    private Long id;
 
     @Embedded
     public Attributes _attributes;

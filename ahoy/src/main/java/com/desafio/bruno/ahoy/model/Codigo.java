@@ -11,7 +11,7 @@ import javax.persistence.Embeddable;
 @Setter
 @ToString()
 @Embeddable
-@Data
 public class Codigo{
+
     public String _text;
 }
