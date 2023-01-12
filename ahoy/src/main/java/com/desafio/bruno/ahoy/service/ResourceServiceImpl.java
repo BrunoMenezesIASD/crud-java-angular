@@ -34,7 +34,7 @@ public class ResourceServiceImpl implements ResourceService{
 
     @Override
     public List<Resource> buscarTodos() {
-        return null;
+        return repository.findAll();
     }
 
 }
