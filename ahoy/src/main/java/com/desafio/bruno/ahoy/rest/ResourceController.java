@@ -30,6 +30,7 @@ public class ResourceController {
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public ResourceDto adicionar(@RequestBody ResourceDto resource) {
+
         return service.adicionar(resource);
     }
 //    @PostMapping("/todos")
