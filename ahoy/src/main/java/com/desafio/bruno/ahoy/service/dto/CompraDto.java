@@ -4,10 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString()
 public class CompraDto {
 
-    public String valor;
+    private Long id;
+
+    private List<ValorDto> valor;
 }

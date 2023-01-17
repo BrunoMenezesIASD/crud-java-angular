@@ -12,5 +12,6 @@ import java.util.Date;
 public class DataDto {
 
 
-    public Date _text;
+    private Long id;
+    private Date _text;
 }

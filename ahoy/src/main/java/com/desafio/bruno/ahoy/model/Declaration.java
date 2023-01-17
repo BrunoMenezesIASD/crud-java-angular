@@ -24,6 +24,6 @@ public class Declaration implements Serializable {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Embedded
+    @OneToOne
     public Attributes attributes;
 }

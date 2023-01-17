@@ -12,9 +12,11 @@ import java.util.List;
 @ToString()
 public class AgenteDto {
 
-    public CodigoDto codigo;
+    private Long id;
 
-    public DataDto data;
+    private CodigoDto codigo;
 
-    public List<RegiaoDto> regiao;
+    private DataDto data;
+
+    private List<RegiaoDto> regiao;
 }

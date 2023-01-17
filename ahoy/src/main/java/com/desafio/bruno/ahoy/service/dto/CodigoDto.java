@@ -9,5 +9,7 @@ import lombok.ToString;
 @ToString()
 public class CodigoDto {
 
-    public String _text;
+    private Long id;
+
+    private String _text;
 }

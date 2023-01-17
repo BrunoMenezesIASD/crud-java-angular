@@ -25,7 +25,7 @@ public class Agentes implements Serializable {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Embedded
+    @OneToOne
     private Attributes attributes;
 
     @OneToOne

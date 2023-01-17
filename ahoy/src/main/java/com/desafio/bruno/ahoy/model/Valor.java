@@ -1,5 +1,6 @@
 package com.desafio.bruno.ahoy.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,6 +23,17 @@ public class Valor implements Serializable {
     @EqualsAndHashCode.Include
     private Long id;
 
-    public String text;
+    private String text;
 
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Geracao geracao;
+
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Compra compra;
+
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    private PrecoMedio precoMedio;
 }

@@ -11,11 +11,13 @@ public class ResourceDto {
 
     private Long id;
 
-    public DeclarationDto _declaration;
+    private AgentesDto agentes;
 
-    public AgentesDto agentes;
+    private String extensao;
 
-    public String nome;
+    private String nome;
 
-    public String extensao;
+    private DeclarationDto _declaration;
+
+
 }

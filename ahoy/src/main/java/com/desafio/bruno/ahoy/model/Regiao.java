@@ -1,7 +1,6 @@
 package com.desafio.bruno.ahoy.model;
 
 import lombok.*;
-import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,7 +10,6 @@ import java.io.Serializable;
 @Getter
 @Setter
 @ToString()
-@Data
 @Entity
 @Table(name = "regiao")
 public class Regiao  implements Serializable {
@@ -25,15 +23,15 @@ public class Regiao  implements Serializable {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Embedded
+    @OneToOne
     public Attributes attributes;
 
-    @Embedded
+    @OneToOne
     public Geracao geracao;
 
-    @Embedded
+    @OneToOne
     public Compra compra;
 
-    @Embedded
+    @OneToOne
     public PrecoMedio precoMedio;
 }

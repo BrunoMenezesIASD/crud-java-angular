@@ -9,6 +9,7 @@ import lombok.ToString;
 @ToString()
 public class AttributesDto {
 
+    private Long id;
 
     public String version;
 

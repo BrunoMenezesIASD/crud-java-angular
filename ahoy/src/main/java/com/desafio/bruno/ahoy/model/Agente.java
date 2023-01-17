@@ -20,18 +20,18 @@ public class Agente implements Serializable {
 
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(generator = "resources_generator")
-    @SequenceGenerator(name = "resources_generator", sequenceName = "resources_sequence", initialValue = 1)
+    @GeneratedValue(generator = "agente_generator")
+    @SequenceGenerator(name = "agente_generator", sequenceName = "agente_sequence", initialValue = 1)
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Embedded
-    public Codigo codigo;
+    @OneToOne
+    private Codigo codigo;
 
-    @Embedded
-    public Data data;
+    @OneToOne
+    private Data data;
 
     @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true)
-    @JoinColumn(name = "agente_id", insertable = false, updatable = false)
-    public List<Regiao> regiao;
+    @JoinColumn(name = "agente_id_fk", insertable = false, updatable = false)
+    private List<Regiao> regiao;
 }
