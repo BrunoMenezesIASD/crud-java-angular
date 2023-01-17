@@ -1,17 +1,19 @@
 package com.desafio.bruno.ahoy.repository;
 
-import com.desafio.bruno.ahoy.model.Resource;
+import com.desafio.bruno.ahoy.model.Resources;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface ResourceRepository extends JpaRepository<Resource,Long> {
+public interface ResourceRepository extends JpaRepository<Resources,Long> {
 
-    List<Resource> findAllByNome(String nome);
+    List<Resources> findAllByNome(String nome);
 
-    Resource findByIdOrderByNome(Long id);
+    Resources findByIdOrderByNome(Long id);
+
+
 
 
 }

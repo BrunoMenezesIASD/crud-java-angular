@@ -7,7 +7,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString()
+
 public class ValorDto {
+
+
+    private Long id;
 
     public String _text;
 

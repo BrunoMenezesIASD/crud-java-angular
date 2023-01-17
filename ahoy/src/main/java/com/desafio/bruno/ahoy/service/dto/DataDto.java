@@ -11,5 +11,6 @@ import java.util.Date;
 @ToString()
 public class DataDto {
 
+
     public Date _text;
 }

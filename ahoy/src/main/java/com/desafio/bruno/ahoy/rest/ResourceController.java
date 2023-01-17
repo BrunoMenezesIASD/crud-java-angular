@@ -1,12 +1,11 @@
 package com.desafio.bruno.ahoy.rest;
 
-import com.desafio.bruno.ahoy.model.Resource;
 import com.desafio.bruno.ahoy.service.ResourceService;
+import com.desafio.bruno.ahoy.service.dto.ResourceDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -18,27 +17,25 @@ public class ResourceController {
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Resource buscarPorid(@PathVariable Long id) {
-        Resource resource = new Resource();
-        return resource = service.buscarPorId(id);
+    public ResourceDto buscarPorid(@PathVariable Long id) {
+        return service.buscarPorId(id);
     }
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Resource> buscarTodos() {
-        List<Resource> resources = new ArrayList<>();
-        return resources = service.buscarTodos();
+    public List<ResourceDto> buscarTodos() {
+        return service.buscarTodos();
     }
 
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
-    public Resource adicionarEndereco(@RequestBody Resource resource) {
+    public ResourceDto adicionar(@RequestBody ResourceDto resource) {
         return service.adicionar(resource);
     }
-    @PostMapping("/todos")
-    @ResponseStatus(HttpStatus.CREATED)
-    public List<Resource> adicionarEndereco(@RequestBody List<Resource> resources) {
-        return service.adicionarTodos(resources);
-    }
+//    @PostMapping("/todos")
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public List<Optional<ResourceDto>> adicionarTodos(@RequestBody List<ResourceDto> resources) {
+//        return service.adicionarTodos(resources);
+//    }
 
 }

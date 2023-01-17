@@ -6,7 +6,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Embeddable;
-import java.util.ArrayList;
 
 @Getter
 @Setter
@@ -15,5 +14,5 @@ import java.util.ArrayList;
 @Data
 public class Geracao{
 
-    public ArrayList<Valor> valor;
+    public String valorGeracao;
 }

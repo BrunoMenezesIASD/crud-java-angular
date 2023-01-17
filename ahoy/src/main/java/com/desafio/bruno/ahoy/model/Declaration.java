@@ -1,20 +1,29 @@
 package com.desafio.bruno.ahoy.model;
 
+import lombok.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
-
+import javax.persistence.*;
+import java.io.Serializable;
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString()
-@Embeddable
 @Data
-public class Declaration{
+@Entity
+public class Declaration implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+
+    @Id
+    @Column(name = "id", nullable = false)
+    @GeneratedValue(generator = "declaration_generator")
+    @SequenceGenerator(name = "declaration_generator", sequenceName = "declaration_sequence", initialValue = 1)
+    @EqualsAndHashCode.Include
+    private Long id;
 
     @Embedded
-    public Attributes _attributes;
+    public Attributes attributes;
 }

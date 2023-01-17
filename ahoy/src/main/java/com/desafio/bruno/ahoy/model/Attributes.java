@@ -1,17 +1,15 @@
 package com.desafio.bruno.ahoy.model;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Embeddable;
-
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString()
 @Embeddable
-public class Attributes{
+public class Attributes {
 
     public String version;
 

@@ -1,16 +1,20 @@
 package com.desafio.bruno.ahoy.service;
 
-import com.desafio.bruno.ahoy.model.Resource;
+import com.desafio.bruno.ahoy.service.dto.ResourceDto;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.List;
 
+@ComponentScan
 public interface ResourceService {
 
-    Resource buscarPorId(Long id);
+    ResourceDto buscarPorId(Long id);
 
-    Resource adicionar(Resource resource);
+    ResourceDto adicionar(ResourceDto resource);
 
-    List<Resource> adicionarTodos(List<Resource> resource);
-
-    List<Resource> buscarTodos();
+//    List<Optional<ResourceDto>> adicionarTodos(List<ResourceDto> resource);
+//
+//    List<Optional<ResourceDto>> adicionarTodos(List<Resources> resourcesList);
+//
+    List<ResourceDto> buscarTodos();
 }

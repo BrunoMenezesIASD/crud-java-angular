@@ -4,15 +4,14 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
-
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString()
 @Entity
-public class Agente implements Serializable {
+@Table(name = "resource")
+public class Resources implements Serializable {
 
 
     private static final long serialVersionUID = 1L;
@@ -25,13 +24,15 @@ public class Agente implements Serializable {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Embedded
-    public Codigo codigo;
+    @OneToOne
+    public Declaration declaration;
 
-    @Embedded
-    public Data data;
+    @OneToOne
+    public Agentes agentes;
 
-    @OneToMany(fetch = FetchType.EAGER, orphanRemoval = true)
-    @JoinColumn(name = "agente_id", insertable = false, updatable = false)
-    public List<Regiao> regiao;
+    @Column(name = "nome")
+    public String nome;
+
+    @Column(name = "extensao")
+    public String extensao;
 }

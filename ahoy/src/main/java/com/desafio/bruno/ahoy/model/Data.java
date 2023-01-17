@@ -6,6 +6,8 @@ import lombok.ToString;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Getter
@@ -15,5 +17,6 @@ import java.util.Date;
 public class Data {
 
     @Embedded
-    public Date _text;
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date text;
 }
